@@ -45,8 +45,6 @@ module.exports.task = function () {
 
   gulp.task ( 'test-unit:watch', function () {
 
-    // Note that we're using gulp.watch, not gulp-watch so we don't get the benefit
-    // of detecting new or deleted files.
     return gulp.src ( testFiles )
       .pipe ( karma ({
         configFile: './tests/karma-unit-tests.conf.js',
