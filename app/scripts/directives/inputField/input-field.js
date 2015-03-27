@@ -11,7 +11,6 @@ angular.module('App')
         scope: {
           textField: "=ngModel",
           emailExists: "=emailExists"
-          //validMethod: "&validMethod"
         },
         templateUrl: 'scripts/directives/inputField/input-field.html',
         link: function ($scope, element, attr, ngModel) {
@@ -86,13 +85,13 @@ angular.module('App')
           };
 
 
-          $scope.clearEmailValid = function(){
-
-            //$scope.validationError = false;
-            //ngModel.$setValidity('not-valid', !$scope.validationError);
-            //$scope.emailNotValid = false;
-
-          };
+          //$scope.clearEmailValid = function(){
+          //
+          //  //$scope.validationError = false;
+          //  //ngModel.$setValidity('not-valid', !$scope.validationError);
+          //  //$scope.emailNotValid = false;
+          //
+          //};
 
           $scope.checkExists = function(){
 
@@ -102,9 +101,6 @@ angular.module('App')
 
             for(var i = 0, iLen = $scope.emailErrorExist.length; i < iLen; i++){
               if($scope.textField === $scope.emailErrorExist[i]){
-                console.log("I AM CHECKING EMAIL", $scope.textField);
-                //$scope.validationError = true;
-                //ngModel.$setValidity('not-valid', !$scope.validationError);
                 $scope.emailNotValid = true;
                 $scope.fieldExits = true;
                 $scope.validationErrorEmailText = "The e-mail is already subscribed";

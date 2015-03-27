@@ -68,8 +68,6 @@ angular.module('App')
           request.data = o.data;
         }
 
-        console.log("THE REQUEST I AM mAKING iS", request);
-
         serviceCall = $http(request);
 
 

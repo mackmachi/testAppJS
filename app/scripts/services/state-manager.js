@@ -26,19 +26,28 @@ angular.module('App')
 
       var updateSubscriberList = function (o) {
 
-        if(o.dataType === 'JSON'){
-          angular.toJson(o.data);
-          //JSON.stringify(o.data)
+        if(o){
+
+          if(o.dataType === 'JSON'){
+            angular.toJson(o.data);
+            //JSON.stringify(o.data)
+          }else{
+            $.param(o.data);
+          }
+
+          return callService({
+            methodName: 'subscribeUser',
+            data: o.data,
+            successHandler: o.successHandler,
+            errorHandler: o.errorHandler
+          });
+
         }else{
-          $.param(o.data);
+          console.log("No data supplied to method");
+          return null;
         }
 
-        return callService({
-          methodName: 'subscribeUser',
-          data: o.data,
-          successHandler: o.successHandler,
-          errorHandler: o.errorHandler
-        });
+
       };
 
 
