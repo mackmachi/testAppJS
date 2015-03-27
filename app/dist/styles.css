@@ -1,0 +1,8 @@
+/* line 1, ../styles/sass/directives/_mask.scss */
+#mask {
+  background-color: rgba(11, 11, 11, 0.67);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

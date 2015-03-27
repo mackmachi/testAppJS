@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/views/subscribe/subscribe-ctrl.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../../prettify.css">
+
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">scripts/views/subscribe/subscribe-ctrl.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">61.36% <small>(27 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">55.56% <small>(5 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">61.36% <small>(27 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">scripts/views/subscribe/</a> &#187; subscribe-ctrl.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">( function () {
+&nbsp;
+  'use strict';
+&nbsp;
+  function SubscribeCtrl ($rootScope, $scope, $timeout, $state, stateManager) {
+&nbsp;
+&nbsp;
+    //setting up the formData to pass with the controller.
+&nbsp;
+&nbsp;
+    $scope.init = function () {
+&nbsp;
+      $scope.emailExists = false;
+      $scope.initializeContent();
+      $scope.formVisible = true;
+      $scope.$on( '$destroy', $scope.destroyed );
+&nbsp;
+    };
+&nbsp;
+    $scope.initializeContent = function () {
+      $scope.clearInputs();
+      $scope.pageTitle = testAppConfig.constants.PAGE_TITLE;
+      $scope.firstNameLabel = testAppConfig.constants.FIRST_NAME_LABEL_ENG;
+      $scope.lastNameLabel = testAppConfig.constants.LAST_NAME_LABEL_ENG;
+      $scope.emailLabel = testAppConfig.constants.EMAIL_LABEL;
+      $scope.validationErrorMaxLengthText = testAppConfig.constants.MAX_LENGTH_ERROR;
+      $scope.validationErrorMinLengthText = testAppConfig.constants.MIN_LENGTH_ERROR;
+      $scope.validationErrorInvalidCharactersText = testAppConfig.constants.INVALID_ERROR;
+      $scope.formData = {
+        'apikey': ''+testAppConfig.API_KEY,
+        'id': ''+testAppConfig.LIST_ID,
+        'email': {
+          'email': ''
+        },
+        'merge_vars': {
+          'FNAME': '',
+          'LNAME': ''
+        }
+      };
+    };
+&nbsp;
+&nbsp;
+    $scope.signUp = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >      $scope.formData.email.email = $scope.emailValue;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.formData.merge_vars.FNAME = $scope.firstName;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.formData.merge_vars.LNAME = $scope.lastName;</span>
+<span class="cstat-no" title="statement not covered" >      $rootScope.$broadcast('mask/update', {msg: "Your request is being sent", type: 'info'});</span>
+<span class="cstat-no" title="statement not covered" >      $rootScope.$broadcast('mask/open-locked');</span>
+<span class="cstat-no" title="statement not covered" >      stateManager.updateSubscriberList({</span>
+        data: $scope.formData,
+        dataType: "JSON",
+        successHandler: $scope.signUpSuccess,
+        errorHandler: $scope.signUpError
+      });
+    };
+&nbsp;
+&nbsp;
+&nbsp;
+    $scope.signUpSuccess = <span class="fstat-no" title="function not covered" >function(response){</span>
+<span class="cstat-no" title="statement not covered" >      $scope.formVisible = false;</span>
+<span class="cstat-no" title="statement not covered" >      $rootScope.$broadcast('mask/update', {msg: "Thank you for signing up", type: 'success', clear: true});</span>
+<span class="cstat-no" title="statement not covered" >      $scope.emailExists = false;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.goToComplete();</span>
+    };
+&nbsp;
+    $scope.signUpError = <span class="fstat-no" title="function not covered" >function(response){</span>
+<span class="cstat-no" title="statement not covered" >      var msgToDisplay = "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if(response.code === 214){ //e-mail code if e-mail exists.</span>
+<span class="cstat-no" title="statement not covered" >        msgToDisplay = "The e-mail is already subscribed, click to close and try again";</span>
+<span class="cstat-no" title="statement not covered" >        $scope.emailExists = true;</span>
+      }else{
+<span class="cstat-no" title="statement not covered" >        msgToDisplay = "There was an error signing you up, click to close and try again";</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $rootScope.$broadcast('mask/update', {msg: msgToDisplay, type: 'error', clear: true});</span>
+&nbsp;
+    };
+&nbsp;
+    $scope.clearInputs = function(){
+      $scope.firstName = "";
+      $scope.lastName = "";
+      $scope.emailValue = "";
+    };
+&nbsp;
+    $scope.goToComplete = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >      $state.go('root.complete');</span>
+    };
+&nbsp;
+    $scope.init();
+&nbsp;
+  }
+&nbsp;
+  angular.module( 'App' )
+    .controller( 'SubscribeCtrl', [
+      '$rootScope',
+      '$scope',
+      '$timeout',
+      '$state',
+      'stateManager',
+      SubscribeCtrl
+    ]);
+&nbsp;
+})();
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 26 2015 20:03:12 GMT-0400 (EDT)</div>
+</div>
+
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../../sorter.js"></script>
+</body>
+</html>

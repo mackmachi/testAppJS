@@ -1,0 +1,15 @@
+.error-container{
+  text-align: right;
+}
+
+.error-message{
+  color: $errorColor;
+}
+
+.error-active{
+
+  input{
+//    background-color: $inputErrorColor;
+    border: 1px solid $errorColor;
+  }
+}

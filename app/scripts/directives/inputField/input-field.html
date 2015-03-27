@@ -1,0 +1,10 @@
+<div class="row">
+  <label for="{{::elementId}}" class="col-xs-12 col-md-2 col-lg-1">{{::label}}</label>
+  <input id="{{::elementId}}" class="col-xs-12 col-md-10 col-lg-11 no-padding" type="text" data-ng-model="textField" data-ng-change="checkContent()" placeholder={{::placeHolderText}} />
+  <div class="error-container col-xs-12" data-ng-if="validationError">
+    <p class="error-message" data-ng-if="maxLengthReached">{{::validationErrorMaxLengthText}}</p>
+    <p class="error-message" data-ng-if="minLengthReached">{{::validationErrorMinLengthText}}</p>
+    <p class="error-message" data-ng-if="emailNotValid">{{::validationErrorEmailText}}</p>
+  </div>
+
+</div>

@@ -1,0 +1,52 @@
+// Set variables for simple form and colours
+
+// Colors
+$backgroundColor: #d6d6d6;
+$sendColor: #23668e;
+$labelColor: #2579a6;
+$hoverColor: #3e3e3e;
+$activeColor: #868686;
+$warningColor: #f2ae0b;
+$errorColor: #cc0000;
+$successColor: #009900;
+$fontErrorColor: #cc0000;
+$inputErrorColor: rgba(204, 0, 0, 0.60);
+$maskColor: rgba(11, 11, 11, 0.67);
+$maskBoxShadowColor: rgb(0, 0, 0);
+
+h1 {
+  color: $sendColor !important;
+  font-weight: 600 !important;
+}
+
+label {
+  color: $labelColor !important;
+  padding-left: 0 !important;
+}
+
+body{
+  background-color: $backgroundColor !important;
+}
+
+.no-padding{
+  padding:0 !important;
+}
+
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.top-buffer { margin-top: 10% }
+
+@import "directives/mask";
+@import "buttons/buttons";
+@import "error/error";
+@import "views/home";
+@import "../../libraries/bootstrap/sass/bootstrap";
+

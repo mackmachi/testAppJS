@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/mask/mask.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../../prettify.css">
+
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">scripts/directives/mask/mask.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">52.94% <small>(36 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">0% <small>(0 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">29.41% <small>(5 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">52.94% <small>(36 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/mask/</a> &#187; mask.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+angular.module('App')
+  .directive('mask', [
+    '$compile',
+    function ($compile) {
+&nbsp;
+      'use strict';
+&nbsp;
+&nbsp;
+      return {
+        restrict: 'A',
+        link: function postLink($scope, element, attr) {
+&nbsp;
+          var defaultZIndex = 7;
+&nbsp;
+          $scope.init = function () {
+&nbsp;
+            $scope.maskIsLocked = false;
+            element.css('visibility', 'hidden');
+            $scope.initMessage();
+            $scope.compileEl();
+            $scope.$on('mask/set-z-index', $scope.setZIndex);
+            $scope.$on('mask/reset-z-index', $scope.resetZIndex);
+            $scope.$on('mask/close', $scope.maskClose);
+            $scope.$on('mask/open', $scope.maskOpen);
+            $scope.$on('mask/update', $scope.updateMessage);
+            $scope.$on('mask/open-invisible', $scope.maskOpenInvisible);
+            $scope.$on('mask/close-invisible', $scope.maskCloseInvisible);
+            $scope.$on('mask/open-locked', $scope.maskOpenLocked);
+            $scope.$on('mask/close-locked', $scope.maskCloseLocked);
+            $scope.$on('$destroy', $scope.destroyed);
+          };
+&nbsp;
+          $scope.initMessage = function(){
+            $scope.msgToDisplay = "Your request is being sent";
+          };
+&nbsp;
+          $scope.compileEl = function(){
+&nbsp;
+            var el = $compile( '&lt;div id="user-information" class="info no-select"&gt;&lt;span&gt;{{msgToDisplay}}&lt;/span&gt;&lt;/div&gt;' )( $scope );
+            element.append( el );
+          };
+&nbsp;
+          $scope.updateMessage = <span class="fstat-no" title="function not covered" >function(e, d){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(d &amp;&amp; d.msg){</span>
+<span class="cstat-no" title="statement not covered" >              $scope.msgToDisplay = d.msg;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(d &amp;&amp; d.type){</span>
+<span class="cstat-no" title="statement not covered" >              if(d.type === 'success'){</span>
+<span class="cstat-no" title="statement not covered" >                element.find('div').removeClass('error info').addClass('success');</span>
+              }else <span class="cstat-no" title="statement not covered" >if(d.type === 'error'){</span>
+<span class="cstat-no" title="statement not covered" >                element.find('div').removeClass('success info').addClass('error');</span>
+              }else <span class="cstat-no" title="statement not covered" >if(d.type === 'info'){</span>
+<span class="cstat-no" title="statement not covered" >                element.find('div').removeClass('error success').addClass('info');</span>
+              }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(d &amp;&amp; d.clear){</span>
+<span class="cstat-no" title="statement not covered" >              $scope.maskIsLocked = false;</span>
+            }
+          };
+&nbsp;
+          $scope.maskClicked = <span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskClose();</span>
+          };
+&nbsp;
+          $scope.maskOpen = <span class="fstat-no" title="function not covered" >function (ev, o) {</span>
+<span class="cstat-no" title="statement not covered" >            element.css('visibility', 'visible');</span>
+<span class="cstat-no" title="statement not covered" >            element.addClass('in');</span>
+&nbsp;
+          };
+&nbsp;
+          $scope.maskClose = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            if ( ! $scope.maskIsLocked) {</span>
+<span class="cstat-no" title="statement not covered" >              element.removeClass('top in invisible');</span>
+<span class="cstat-no" title="statement not covered" >              element.css('visibility', 'hidden');</span>
+            }
+          };
+&nbsp;
+          $scope.maskTransitionEnd = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            if ( ! element.hasClass('in')) {</span>
+<span class="cstat-no" title="statement not covered" >              element.css('visibility', 'hidden');</span>
+            }
+          };
+&nbsp;
+          $scope.maskOpenInvisible = <span class="fstat-no" title="function not covered" >function (ev) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskOpen(ev);</span>
+<span class="cstat-no" title="statement not covered" >            element.addClass('invisible');</span>
+          };
+&nbsp;
+          $scope.maskCloseInvisible = <span class="fstat-no" title="function not covered" >function (ev) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskClose(ev);</span>
+<span class="cstat-no" title="statement not covered" >            element.removeClass('invisible');</span>
+          };
+&nbsp;
+          $scope.maskOpenLocked = <span class="fstat-no" title="function not covered" >function (ev) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskIsLocked = true;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskOpen();</span>
+          };
+&nbsp;
+          $scope.maskCloseLocked = <span class="fstat-no" title="function not covered" >function (ev) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("I WILL CLOSE MASK HERE");</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskIsLocked = false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maskClose();</span>
+          };
+&nbsp;
+          $scope.setZIndex = <span class="fstat-no" title="function not covered" >function (ev, zIndex) {</span>
+<span class="cstat-no" title="statement not covered" >            if (zIndex) {</span>
+<span class="cstat-no" title="statement not covered" >              element.css('zIndex', zIndex);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              $scope.resetZIndex();</span>
+            }
+&nbsp;
+          };
+&nbsp;
+          $scope.resetZIndex = <span class="fstat-no" title="function not covered" >function (ev, zIndex) {</span>
+<span class="cstat-no" title="statement not covered" >            element.css('zIndex', defaultZIndex);</span>
+          };
+&nbsp;
+          $scope.destroyed = <span class="fstat-no" title="function not covered" >function () {</span>
+&nbsp;
+          };
+&nbsp;
+          $scope.init();
+        }
+      };
+    }
+  ]
+);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 26 2015 20:03:12 GMT-0400 (EDT)</div>
+</div>
+
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../../sorter.js"></script>
+</body>
+</html>

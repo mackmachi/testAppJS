@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directives/inputField/input-field.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../../prettify.css">
+
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">scripts/directives/inputField/input-field.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">70.11% <small>(61 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">56.82% <small>(25 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">66.67% <small>(6 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">70.11% <small>(61 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">scripts/directives/inputField/</a> &#187; input-field.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+angular.module('App')
+  .directive('inputField', [
+    function () {
+&nbsp;
+      'use strict';
+&nbsp;
+      return {
+        require: '?ngModel',
+        restrict: 'A',
+        scope: {
+          textField: "=ngModel",
+          emailExists: "=emailExists"
+          //validMethod: "&amp;validMethod"
+        },
+        templateUrl: 'scripts/directives/inputField/input-field.html',
+        link: function ($scope, element, attr, ngModel) {
+&nbsp;
+          var inputType;
+&nbsp;
+          $scope.init = function () {
+&nbsp;
+            $scope.emailErrorExist = [];
+&nbsp;
+            $scope.fieldExits = false;
+            $scope.inputValid = ngModel.$valid;
+            $scope.attr = $scope.$eval(attr.inputField) || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if($scope.attr.id){
+<span class="cstat-no" title="statement not covered" >              $scope.elementId = $scope.attr.id;</span>
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if($scope.attr.label){
+<span class="cstat-no" title="statement not covered" >              $scope.label = $scope.attr.label;</span>
+            }else{
+              $scope.label="";
+            }
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if($scope.attr &amp;&amp; $scope.attr.maxLength){
+              $scope.maxLength = $scope.attr.maxLength
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if($scope.attr &amp;&amp; $scope.attr.inputType === "email"){
+<span class="cstat-no" title="statement not covered" >              inputType = "email"</span>
+            }
+&nbsp;
+            $scope.setContent();
+            <span class="missing-if-branch" title="if path not taken" >I</span>if($scope.emailExists !== undefined){
+<span class="cstat-no" title="statement not covered" >              $scope.$watch('emailExists', $scope.emailExistUpdate);</span>
+            }
+&nbsp;
+&nbsp;
+            ngModel.$setValidity('not-valid', false);
+            //$scope.checkContent();
+&nbsp;
+          };
+&nbsp;
+&nbsp;
+          $scope.checkEmailValid = <span class="fstat-no" title="function not covered" >function(){</span>//very simple check for e-mail
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if($scope.textField.split('@').length &gt; 1){</span>
+<span class="cstat-no" title="statement not covered" >              if($scope.textField.split('@')[1].split(".").length &gt; 1 &amp;&amp; $scope.textField.split('@')[1].split(".")[1].length &gt; 1){</span>
+<span class="cstat-no" title="statement not covered" >                return true;</span>
+&nbsp;
+              }else{
+<span class="cstat-no" title="statement not covered" >                return false;</span>
+              }
+            }else{
+<span class="cstat-no" title="statement not covered" >              return false;</span>
+            }
+          };
+&nbsp;
+&nbsp;
+          $scope.emailExistUpdate = <span class="fstat-no" title="function not covered" >function(){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if($scope.emailExists){</span>
+<span class="cstat-no" title="statement not covered" >              $scope.validationError = true;</span>
+<span class="cstat-no" title="statement not covered" >              ngModel.$setValidity('not-valid', !$scope.validationError);</span>
+<span class="cstat-no" title="statement not covered" >              $scope.emailNotValid = true;</span>
+<span class="cstat-no" title="statement not covered" >              $scope.validationErrorEmailText = "The e-mail is already subscribed";</span>
+<span class="cstat-no" title="statement not covered" >              $scope.emailExists = false;</span>
+<span class="cstat-no" title="statement not covered" >              $scope.emailErrorExist.push($scope.textField);</span>
+            }
+&nbsp;
+          };
+&nbsp;
+&nbsp;
+          $scope.clearEmailValid = <span class="fstat-no" title="function not covered" >function(){</span>
+&nbsp;
+            //$scope.validationError = false;
+            //ngModel.$setValidity('not-valid', !$scope.validationError);
+            //$scope.emailNotValid = false;
+&nbsp;
+          };
+&nbsp;
+          $scope.checkExists = function(){
+&nbsp;
+            //$scope.clearEmailValid();
+            $scope.fieldExits = false;
+            $scope.validationErrorEmailText = "The "+$scope.label+" is not valid";
+&nbsp;
+            for(var i = 0, iLen = $scope.emailErrorExist.length; i &lt; iLen; i++){
+<span class="cstat-no" title="statement not covered" >              if($scope.textField === $scope.emailErrorExist[i]){</span>
+<span class="cstat-no" title="statement not covered" >                console.log("I AM CHECKING EMAIL", $scope.textField);</span>
+                //$scope.validationError = true;
+                //ngModel.$setValidity('not-valid', !$scope.validationError);
+<span class="cstat-no" title="statement not covered" >                $scope.emailNotValid = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.fieldExits = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.validationErrorEmailText = "The e-mail is already subscribed";</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+              }
+            }
+&nbsp;
+&nbsp;
+          };
+&nbsp;
+          $scope.checkContent = function(){
+&nbsp;
+            //Manual checks, can add more to the directive.
+            <span class="missing-if-branch" title="else path not taken" >E</span>if($scope.textField !== undefined){
+&nbsp;
+              if($scope.textField.length === 0 ){
+                $scope.minLengthReached = true;
+                $scope.maxLengthReached = false;
+                $scope.emailNotValid = false;
+              }else if( $scope.maxLength &amp;&amp; $scope.textField.length &gt;  $scope.maxLength){
+                $scope.maxLengthReached = true;
+                $scope.minLengthReached = false;
+                $scope.emailNotValid = false;
+                ngModel
+              }else <span class="missing-if-branch" title="if path not taken" >I</span>if(inputType === "email"){
+<span class="cstat-no" title="statement not covered" >                $scope.emailNotValid = !$scope.checkEmailValid();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.maxLengthReached = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.minLengthReached = false;</span>
+&nbsp;
+              }else {
+                $scope.maxLengthReached = false;
+                $scope.minLengthReached = false;
+                $scope.emailNotValid = false;
+                $scope.validationErrorEmailText = "The "+$scope.label+" is not valid";
+              }
+            }else {
+<span class="cstat-no" title="statement not covered" >              $scope.minLengthReached = true;</span>
+            }
+&nbsp;
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(!$scope.emailNotValid){
+              $scope.checkExists();
+            }
+            if($scope.maxLengthReached || $scope.minLengthReached || $scope.emailNotValid || $scope.fieldExists){
+              $scope.validationError = true;
+              ngModel.$setValidity('not-valid', !$scope.validationError);
+              element.addClass("error-active");
+            }else{
+              $scope.fieldExists = false;
+              $scope.validationError = false;
+              ngModel.$setValidity('not-valid', !$scope.validationError);
+              element.removeClass("error-active");
+            }
+&nbsp;
+&nbsp;
+&nbsp;
+            $scope.inputValid = ngModel.$valid;
+          };
+&nbsp;
+          $scope.setContent = function(){
+            $scope.validationError = false;
+            $scope.maxLengthReached = false;
+            $scope.minLengthReached = false;
+            $scope.emailNotValid = false;
+            $scope.placeHolderText = "Please enter "+$scope.label;
+            $scope.validationErrorMaxLengthText = "The "+$scope.label+" is larger than the character limit";
+            $scope.validationErrorMinLengthText =  "The "+$scope.label+" is required";
+            $scope.validationErrorEmailText = "The "+$scope.label+" is not valid";
+          };
+&nbsp;
+          $scope.init();
+        }
+      };
+    }
+  ]
+  );
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 26 2015 20:03:12 GMT-0400 (EDT)</div>
+</div>
+
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../../sorter.js"></script>
+</body>
+</html>

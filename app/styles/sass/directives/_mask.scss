@@ -1,0 +1,43 @@
+#mask {
+  background-color: $maskColor;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+#user-information {
+
+
+  color: white;
+  height: 25%;
+  line-height: 25%;
+
+  position: absolute;
+  text-align: center;
+  top: 38%;
+  width: 100%;
+
+  span{
+    font-size: 50px;
+    font-size: 3.5vw;
+    top: 50%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.success {
+    background-color: $successColor;
+  }
+
+  &.error{
+    background-color: $errorColor;
+  }
+
+  &.info{
+    background-color: $sendColor;
+  }
+
+}

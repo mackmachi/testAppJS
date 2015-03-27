@@ -1,0 +1,22 @@
+.submit {
+  background-color:$sendColor;
+  border: 1px solid;
+  color: white;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 15px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+
+  &:hover{
+    color: white !important;
+    background-color: $hoverColor;
+  }
+
+  &:active{
+//    color: white !important;
+    background-color: $activeColor;
+  }
+
+}
