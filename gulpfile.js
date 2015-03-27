@@ -8,14 +8,11 @@
 var gulp = require ( 'gulp' );
 var requireDir = require ( 'requiredir' );
 var watch = require ( 'gulp-watch' ); // gulp.watch is too primitive. This covers new and deleted files and per-file streams
-var compass = require('gulp-compass');
 
 
 /**
  * Import our tasks
  *
- * I broke it down like this so that the file isn't so monolithic and so that we can focus
- * on the workflow rather than the individual tasks.
  */
 
 var imports = requireDir ( './gulp' );
@@ -28,13 +25,8 @@ for ( var prop in imports ) {
   }
 }
 
-var connect = imports.previewServer.connect;
-
 /**
  * Workflows
- *
- * These are collections of tasks that we need to support our workflow
- *
  */
 
 
@@ -57,5 +49,5 @@ gulp.task ( 'test', [
 );
 
 // Default - runs when you just type 'gulp'
-gulp.task ( 'default', [ 'dev' ] );
+gulp.task ( 'default', [ 'test' ] );
 
