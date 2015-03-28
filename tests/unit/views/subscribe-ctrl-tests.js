@@ -67,4 +67,27 @@ describe('SubscribeCtrl', function(){
     expect($scope.emailValue).toBe("");
   });
 
+  it('should clear inputs on singup sucess', function(){
+    $scope.signUpSuccess();
+    expect($scope.formVisible).toBe(false);
+  })
+
+  it('should clear inputs on singup error', function(){
+    var response={code :214};
+    $scope.signUpError(response);
+    expect($scope.emailExists).toBe(true);
+  });
+
+  it('should clear inputs on singup error', function(){
+    var response={code :500};
+    $scope.signUpError(response);
+    expect($scope.emailExists).toBe(false);
+  });
+
+  it('should populate data to send', function(){
+    $scope.emailValue = "test@test.com"
+    $scope.signUp();
+    expect($scope.formData.email.email).toBe("test@test.com");
+  });
+
 });
