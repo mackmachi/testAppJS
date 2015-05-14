@@ -1,10 +1,7 @@
-/**
- * Created by mackenzie on 2015-03-21.
- */
 var testAppConfig = {
 
   constants : {
-    DEFAULT_TIMEOUT : 30000,
+    DEFAULT_TIMEOUT : 5000,
     PAGE_TITLE: "Subscribe Here",
     FIRST_NAME_LABEL_ENG: "First Name",
     LAST_NAME_LABEL_ENG: "Last Name",
@@ -19,9 +16,9 @@ var testAppConfig = {
     defaultPattern: /^[a-zA-Z0-9\s\-_#+.$!'()]+$/,
     secondaryTextPattern: /^$|^[a-zA-Z0-9\s\-_#+.$!'()]+$/
   },
-  API_KEY : "d856fde946813715b61326ed34d6ad9b-us10",
+  API_KEY : "d856fde946813715b61326ed34d6ad9b-us10", //really bad should not be exposed...
   LIST_ID: "c8cffd8845",
   PROXY_ENABLED: true,
-  PROXY_URL: 'https://cors-anywhere.herokuapp.com/'
+  PROXY_URL: 'https://cors-anywhere.herokuapp.com/' //used to get by cors
 
 };
